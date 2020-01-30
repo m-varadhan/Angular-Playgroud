@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-  name = 'Angular';
+  name = 'Ng-zone-demo';
   form: FormGroup;
 
   constructor(formBuilder: FormBuilder) {
