@@ -3,5 +3,6 @@
   Start editing to see some magic happen :)
 </p>
   <form [formGroup]="form">
-  <input id="username" name="username" class="form-control" formControlName="username"/>
+  <input id="username" name="username" class="form-control" formControlName="username" (click)="onClick()"/>
+  <pre (mousemove)="onMouseMove()" > {{ random.randomSeed }} </pre>
   </form>
