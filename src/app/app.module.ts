@@ -4,10 +4,12 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { RandomGeneratorService } from './random-generator.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule ],
   declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [RandomGeneratorService]
 })
 export class AppModule { }

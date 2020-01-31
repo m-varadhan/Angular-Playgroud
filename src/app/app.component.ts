@@ -2,6 +2,22 @@ import { Component } from '@angular/core';
 import { OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { Random, RandomConfig, RandomGeneratorService } from './random-generator.service';
+
+class ExtendedGeneratorService extends RandomGeneratorService { 
+  constructor() {
+    super(new RandomConfig(15));
+  }
+}
+
+@Component({
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css'],
+  //providers: [ {provide: RandomGeneratorService, useValue: new RandomGeneratorService(new RandomConfig(15)) }]
+  providers: [ {provide: RandomGeneratorService, useClass: ExtendedGeneratorService} ]
+})
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
