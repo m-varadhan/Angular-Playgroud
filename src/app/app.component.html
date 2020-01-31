@@ -4,5 +4,6 @@
 </p>
   <form [formGroup]="form">
   <input id="username" name="username" class="form-control" formControlName="username" (click)="onClick()"/>
-  <pre (mousemove)="onMouseMove()" > {{ random.randomSeed }} </pre>
+  <br>
+  <pre (mousemove)="onMouseMove()" >Random Seed:  {{ random.randomSeed }} </pre>
   </form>
